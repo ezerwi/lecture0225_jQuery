@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST2</title>
+
+<style type="text/css">
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.silver {
+	color: silver;
+}
+</style>
+
+<script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("a[href*='dotnet']").addClass("red");
+		$("a[href$='aspx']").addClass("green");
+		jQuery("a[href^='mailto:']").addClass("silver");
+		$('a[href$="com"]').addClass("red");
+	})
+</script>
+
+</head>
+<body>
+
+	<a href="http://www.dotnetkorea.com/">닷넷코리아</a>
+	<br>
+	<a href="http://www.visualacademy.com/Default.aspx">비주얼아카데미</a>
+	<br>
+	<a href="mailto:redplus@hawaso.com">이메일</a>
+	<br>
+	<a href="http://www.naver.com">네이버</a>
+	<br>
+	<a href="http://www.google.com">구글</a>
+	<br>
+	<a href="http://www.nate.com">네이트</a>
+	<br>
+
+
+</body>
+</html>
