@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST1</title>
+<script type="text/javascript">
+	function fnc1() {
+		alert("경고경고", "경고메시지")
+	}
+	function fnc2() {
+		// <table></table> 객체 tb 생성
+		var tb=document.getElementById("t");
+		var tags="<tr><td>데이터</td><tr>";
+		tb.innerHTML = tags;
+	}
+</script>
+
+</head>
+<body >
+
+	<input type="button" onclick="fnc2()">
+	
+	<table ID = "t" border="1">
+	
+	</table>
+
+</body>
+</html>
