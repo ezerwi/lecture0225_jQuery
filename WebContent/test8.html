@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST5</title>
+
+<style type="text/css">
+.redColor {
+	color: red;
+}
+
+.blueColor {
+	color: blue;
+}
+</style>
+
+<script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	<!--
+	$(function() {
+		$('#btnClick').bind("click", function() {
+			alert('클릭됨');
+		});
+		
+		$('#btnClick').bind("mouseover", function() {
+			document.getElementById('btnClick').style.backgroundColor = 'red';
+		});
+		
+		$('#btnClick').bind("mouseout", function() {
+			$('#btnClick').get(0).style.backgroundColor = 'blue';
+		});
+	});
+	-->
+	
+	function fn1() {alert('클릭됨');}
+	function fn2() {document.getElementById('btnClick').style.backgroundColor = 'red';}
+	function fn3() {$('#btnClick').get(0).style.backgroundColor = 'blue';}
+	
+	$(document).ready(
+		function() {
+			$('#btnClick').bind("click", fnc1);
+			$('#btnClick').bind("mouseover", fnc2);
+			$('#btnClick').bind("mouseout", fnc3);
+		}		
+	)
+</script>
+
+</head>
+
+<body>
+
+	<div id="btnClick">CLICK!!!</div>
+
+</body>
+</html>

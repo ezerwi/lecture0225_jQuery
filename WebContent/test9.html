@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST5</title>
+
+<style type="text/css">
+.yellowBorder{
+	background-color: yellow;
+	border: 1px solid red;
+}
+</style>
+
+<script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	
+	$(function() {
+		$('#btnClick').bind("mouseover", function() {
+			$('#btnClick').addClass('yellowBorder')
+		})
+		.bind("mouseout", function() {
+			$(this).removeClass('yellowBorder')
+		});
+	});
+	
+</script>
+
+</head>
+
+<body>
+
+	<div id="btnClick">CLICK!!!</div>
+
+</body>
+</html>
