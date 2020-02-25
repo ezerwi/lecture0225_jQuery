@@ -3,26 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>TEST1</title>
+
+<style type="text/css">
+.bg {
+	background-color: yellow;
+}
+
+.sil {
+	background-color: silver;
+}
+</style>
+
+<script src="jquery-1.6.2.js" type="text/javascript"></script>
+
 <script type="text/javascript">
-	function fnc1() {
-		alert("경고경고", "경고메시지")
-	}
-	function fnc2() {
-		// <table></table> 객체 tb 생성
-		var tb=document.getElementById("t");
-		var tags="<tr><td>데이터</td><tr>";
-		tb.innerHTML = tags;
-	}
+	$(document).ready(function() {
+		$('#hw').addClass("bg");
+		$('#hw').click(function() {
+			alert('HELLO');
+			$(this).addClass("sil");
+		});
+	});
 </script>
 
 </head>
-<body >
+<body>
+	<div style="background-color: yellow;" onclick="alert('안녕');">
+		HELLO! JQUERY!!!! (div에 직접 CSS 적용)</div>
 
-	<input type="button" onclick="fnc2()">
-	
-	<table ID = "t" border="1">
-	
-	</table>
+	<div class="bg">
+	HELLO! JQUERY!!!! (head에 class bg 이름으로 CSS 만들어 불러오기)
+	</div>
 
+	<div id="hw">HELLO! JQUERY!!!! (head에 id bg 이름으로 CSS 만들어 불러오기)</div>
 </body>
 </html>
